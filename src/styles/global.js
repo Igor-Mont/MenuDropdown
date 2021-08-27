@@ -7,7 +7,19 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
-  body {
-    height: 100vh;
+  html {
+    min-height: 100%;
+    background-color: #202020;
+  }
+  
+  *, button ,input {
+    border: 0;
+    background: none;
+    font-family: 'Roboto', -apple-system, system-ui, sans-serif;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
   }
 `;
