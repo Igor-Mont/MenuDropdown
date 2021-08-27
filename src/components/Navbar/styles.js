@@ -28,21 +28,44 @@ export const DropdownStyles = styled.div`
   }
 
   .dropdown-root {
-    z-index: 10;
+    z-index: 100;
     position: absolute;
   }
 
   .dropdown-arrow {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background-color: #fff;
+
+      top: -6.5px;
+      left: -8px;
+      transform: rotate(45deg);
+      border-radius: 4px 0 0 0;
+
+    }
   }
 
   .dropdown-container {
     position: absolute;
     overflow: hidden;
+    box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25);
     background: #fff;
-    box-shadow: -3px 3px 5px rgba(82, 95, 127, 0.04);
   }
 
   .dropdown-section {
     position: absolute;
+  }
+
+  .dropdown-background {
+    position: absolute;
+    bottom: 0;
+    background-color: #f6f9fc;
+    width: 100%;
+
   }
 `;

@@ -1,18 +1,16 @@
 import React, { useContext } from 'react';
 import { Context } from './Provider';
-import { motion } from 'framer-motion'
-
-// import { Container } from './styles';
+import { motion } from 'framer-motion';
 
 export function DropdownSection({ option }) {
-  const { updateOptionProps, cachedId } = useContext(Context);
+  const { cachedId } = useContext(Context);
 
-  const { id, optionDimension, contentDimensions, optionCenterX } = option;
+  const { id, contentDimensions, optionCenterX } = option;
 
   const contentWidth = contentDimensions?.width || 0;
   const x = optionCenterX - contentWidth / 2;
 
-  const isActive = cachedId == id;
+  const isActive = cachedId === id;
 
   return (
     <motion.div 

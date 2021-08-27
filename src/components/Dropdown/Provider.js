@@ -37,7 +37,7 @@ export function DropdownProvider({ children }) {
   const getOptionById = useCallback((id) => options.find(item => item.id === id ), [options]);
   const deleteOptionById = useCallback((id) => {
     setOptions(items => items.filter(item => item.id !== id))
-  }, [options]);
+  }, [setOptions]);
 
   useEffect(() => {
     if (targetId !== null) setCachedId(targetId)
